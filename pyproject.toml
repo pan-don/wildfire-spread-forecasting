@@ -1,0 +1,44 @@
+[project]
+name = "wildspread"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "contextily>=1.7.1",
+    "geopandas>=1.2.0",
+    "kagglehub>=1.0.3",
+    "lightgbm>=4.7.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pandas>=3.1.1",
+    "pyarrow>=26.0.1",
+    "pytorch-ignite>=0.5.5",
+    "pytorch-optimizer>=4.1.0",
+    "scikit-learn>=1.9.1",
+    "scipy>=1.18.1",
+    "seaborn>=0.13.2",
+    "segmentation-models-pytorch>=0.6.0",
+    "tensorboard>=2.21.0",
+    "torch>=2.11.0",
+    "torchinfo>=1.8.0",
+    "torchvision>=0.26.0",
+    "tqdm>=4.70.1",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "nbclient>=0.11.0",
+    "nbconvert>=7.17.2",
+    "nbformat>=5.11.1",
+]
